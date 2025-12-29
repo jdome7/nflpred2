@@ -1,0 +1,8 @@
+.env
+__pycache__/
+venv/
+.streamlit
+qb_weekly_model.db
+mlruns/
+first.ipynb
+**/.ipynb_checkpoints/
