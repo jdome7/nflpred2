@@ -1,5 +1,8 @@
 name: Weekly NFL Projections
 on:
+  push:
+    branches:
+      - main          
   schedule:
     - cron: '0 9 * * 3'  # 9:00 AM UTC every Wednesday
   workflow_dispatch:     
@@ -17,7 +20,7 @@ jobs:
           python-version: '3.10'
 
       - name: Install Dependencies
-        run: pip install pandas nflreadpy xgboost joblib sqlalchemy psycopg2 numpy scipy python-dotenv sqlalchemy
+        run: pip install pandas nflreadpy xgboost joblib sqlalchemy psycopg2-binary numpy scipy python-dotenv
 
       - name: Run Predictions
         env:
