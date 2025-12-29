@@ -5,7 +5,6 @@ import plotly.graph_objects as go
 import plotly.express as px
 from sqlalchemy import create_engine
 from scipy.stats import poisson
-import os
 
 
 st.set_page_config(layout="wide", page_title="NFL QB Predictor", page_icon="🏈")
