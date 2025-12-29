@@ -20,7 +20,7 @@ jobs:
           python-version: '3.10'
 
       - name: Install Dependencies
-        run: pip install pandas nflreadpy xgboost joblib sqlalchemy psycopg2-binary numpy scipy python-dotenv
+        run: pip install pandas nflreadpy xgboost joblib sqlalchemy psycopg2 numpy scipy python-dotenv
 
       - name: Run Predictions
         env:
