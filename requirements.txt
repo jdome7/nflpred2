@@ -8,6 +8,5 @@ matplotlib
 plotly
 scipy
 psycopg2-binary
-os
 python-dotenv
 joblib
