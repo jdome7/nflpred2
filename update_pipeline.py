@@ -22,8 +22,7 @@ df = get_updated_data()
 
 df = df[df['season'] == 2025]
 
-#next_week = df[df['passing_yards'].isna()]['week'].min()
-next_week = 18
+next_week = df[df['passing_yards'].isna()]['week'].min()
 
 print(f"Targeting Week {next_week} for new projections...")
 

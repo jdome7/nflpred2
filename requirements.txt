@@ -10,3 +10,5 @@ scipy
 psycopg2-binary
 python-dotenv
 joblib
+pyarrow
+mlflow
