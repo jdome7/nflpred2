@@ -1,13 +1,22 @@
-name: Keep Streamlit App From Sleeping
+name: Wake Streamlit App
 
 on:
   schedule:
     - cron: '0 */10 * * *'
-  workflow_dispatch: 
+  workflow_dispatch:
+
 jobs:
-  ping-app:
+  wake-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Streamlit App
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
         run: |
-          curl -I https://nflpred.streamlit.app/
+          pip install playwright
+          playwright install chromium
+      - name: Run wake script
+        run: python wake_app.py
